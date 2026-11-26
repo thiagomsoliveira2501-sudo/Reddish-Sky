@@ -1,0 +1,1092 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+background-color: #101d31;
+font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.pagina{
+position: relative;
+background-color: #101d31;
+color: white;
+margin: 0;
+padding: calc(2vw + 74px + 1vw) 2vw 2vw;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+}
+
+.cabecalho{
+position: absolute;
+display: block;
+width: 1440px;
+height: 74px;
+margin: 0;
+left: max(0px, calc((100% - 1440px) / 2));
+top: 0;
+zoom: 1.1;
+z-index: 100;
+}
+
+.logo{
+position: absolute;
+left: 67px;
+top: 28px;
+min-width: 0;
+}
+
+.logoNome{
+display: flex;
+align-items: center;
+gap: 8px;
+font-family: 'Inter', Arial, sans-serif;
+font-size: 18px;
+color: white;
+font-weight: 600;
+color: #fff2bc;
+text-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.logoNome span{
+color: red;
+font-size: 18px;
+font-weight: 600;
+}
+
+.logoNome img{
+width: 40px;
+height: 40px;
+object-fit: contain;
+}
+
+.logo h2{
+position: absolute;
+left: 0;
+top: 41px;
+margin: 0;
+font-family: 'Inter', Arial, sans-serif;
+font-size: 32px;
+font-weight: 800;
+line-height: 1;
+color: white;
+white-space: nowrap;
+}
+
+.menu{
+position: absolute;
+left: 383px;
+top: 36px;
+margin: 0;
+display: flex;
+align-items: center;
+gap: 33px;
+}
+
+.menu ul{
+display: flex;
+align-items: center;
+gap: 33px;
+list-style: none;
+}
+
+.menu a{
+text-decoration: none;
+color: #fff9e5;
+font-family: 'Inter', Arial, sans-serif;
+font-size: 13px;
+display: inline-block;
+transition: 0.3s ease;
+}
+
+.menu a:hover{
+transform: translateY(-5px);
+filter: brightness(1.2);
+box-shadow: 0 5px 15px #e3ad2650;
+}
+
+.botaoConversar{
+position: absolute;
+left: 1217px;
+top: 22px;
+background-color: #d6a52d;
+color: #101c30;
+text-decoration: none;
+font-family: 'Inter', Arial, sans-serif;
+font-size: 14px;
+font-weight: 600;
+padding: 0 24px;
+width: 208px;
+height: 52px;
+min-width: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-radius: 2px;
+transition: 0.3s ease;
+}
+
+.conteudo{
+display: flex;
+justify-content: space-between;
+gap: 3%;
+}
+
+.textoPrincipal{
+width: 47%;
+}
+
+.categoria{
+font-size: 0.8vw;
+margin-bottom: 1.5vw;
+color: #fff2c6;
+}
+
+.categoria span{
+display: inline-block;
+width: 0.5vw;
+height: 0.5vw;
+background-color: #e3ad26;
+margin-right: 0.5vw;
+}
+
+.textoPrincipal h1{
+font-family: Impact, "Arial Narrow", sans-serif;
+font-size: 5.8vw;
+font-weight: normal;
+line-height: 1;
+color: #fff1bf;
+margin-bottom: 1vw;
+}
+
+.descricao{
+font-size: 1.2vw;
+line-height: 1.6vw;
+color: #aab2c0;
+max-width: 38vw;
+margin-bottom: 0.7vw;
+}
+
+.botoes{
+display: flex;
+gap: 1vw;
+}
+
+.botaoFilmes,
+.botaoProdutora{
+text-decoration: none;
+font-size: 1vw;
+padding: 1.1vw 1.5vw;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 2vw;
+transition: 0.3s ease;
+}
+
+.botaoFilmes{
+background-color: #e3ad26;
+color: #101d31;
+}
+
+.botaoProdutora{
+border: 1px solid #29374b;
+color: white;
+}
+
+.botaoFilmes:hover,
+.botaoProdutora:hover,
+.botaoConversar:hover{
+transform: translateY(-5px);
+filter: brightness(1.2);
+box-shadow: 0 5px 15px #e3ad2650;
+}
+
+.imagens{
+width: 50%;
+display: flex;
+flex-direction: column;
+gap: 2px;
+}
+
+.imagemPrincipal{
+width: 100%;
+aspect-ratio: 1.77 / 1;
+position: relative;
+overflow: hidden;
+}
+
+.imagemPrincipal img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.destaque{
+position: absolute;
+top: 1.5vw;
+left: 1.5vw;
+color: white;
+font-size: 0.8vw;
+}
+
+.imagemSecundaria{
+width: 100%;
+aspect-ratio: 3.5 / 1;
+position: relative;
+overflow: hidden;
+}
+
+.imagemSecundaria img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.informacoesFilme{
+position: absolute;
+bottom: 1.5vw;
+left: 1.5vw;
+color: white;
+}
+
+.informacoesFilme span{
+font-size: 0.8vw;
+}
+
+.informacoesFilme h2{
+font-family: Georgia, serif;
+font-size: 2vw;
+font-weight: normal;
+margin-top: 0.4vw;
+}
+
+.informacoesFilme p{
+font-size: 0.8vw;
+color: #d0d0d0;
+margin-top: 0.5vw;
+}
+
+.botaoPlay{
+position: absolute;
+right: 2vw;
+bottom: 1.5vw;
+width: 3vw;
+height: 3vw;
+border: 1px solid white;
+border-radius: 50%;
+color: white;
+text-decoration: none;
+font-size: 1.8vw;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+/* PÁGINA NOTICIAS */
+
+.conteudoNoticia{
+display: flex;
+justify-content: space-around;
+align-items: center;
+gap: 5%;
+width: 100%;
+height: 85%;
+padding: 1vw 7vw;
+}
+
+.textoNoticia{
+width: 55%;
+}
+
+.textoNoticia h1{
+font-family: Impact, "Arial Narrow", sans-serif;
+font-size: 4.2vw;
+font-weight: normal;
+line-height: 1;
+color: #fff1bf;
+margin-bottom: 3vw;
+}
+
+.textoNoticia h2{
+font-family: Impact, "Arial Narrow", sans-serif;
+font-size: 2.3vw;
+font-weight: normal;
+line-height: 1.1;
+color: #fff1bf;
+margin-bottom: 2vw;
+}
+
+.textoNoticia p{
+font-size: 1.2vw;
+line-height: 1.9vw;
+color: #aab2c0;
+max-width: 38vw;
+margin-bottom: 1.5vw;
+}
+
+.imagemNoticia{
+width: 25%;
+aspect-ratio: 2 / 3;
+max-height: 35vw;
+overflow: hidden;
+border-radius: 2vw;
+}
+
+.imagemNoticia img{
+width: 100%;
+height: 100%;
+object-fit: contain;
+display: block;
+}
+
+.botaoVerMais{
+width: 13.5vw;
+padding: 1.1vw 1.5vw;
+border: 1px solid #29374b;
+color: white;
+text-decoration: none;
+font-size: 1vw;
+display: flex;
+align-items: center;
+justify-content: space-between;
+transition: 0.3s ease;
+}
+
+.botaoVerMais:hover{
+transform: translateY(-5px);
+filter: brightness(1.2);
+box-shadow: 0 5px 15px #e3ad2650;
+}
+
+
+/* PÁGINA FILMES E SÉRIES */
+
+.conteudoFilmes{
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+height: 82%;
+padding: 1vw;
+gap: 1vw;
+margin-top: 2vw;
+position: relative;
+z-index: 1;
+}
+
+.listaFilmes{
+display: flex;
+align-items: center;
+justify-content: space-around;
+width: 84%;
+gap: 2vw;
+}
+
+.cardFilme{
+width: 28%;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+flex-shrink: 0;
+z-index: 1;
+--escala: 1;
+--movimento: 0px;
+transform: translateX(var(--movimento)) scale(var(--escala));
+transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), height 0.85s ease;
+will-change: transform;
+}
+
+.cardFilme img{
+width: 100%;
+height: 29vw;
+object-fit: cover;
+border-radius: 8px;
+box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+display: block;
+transition: height 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cardFilme h2{
+font-size: 1.7vw;
+font-weight: normal;
+color: white;
+margin-top: 1vw;
+}
+
+.filmeCentral{
+--escala: 1.08;
+z-index: 2;
+}
+
+.filmeCentral img{
+height: 33vw;
+border: 1px solid rgba(227, 173, 38, 0.7);
+box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 14px rgba(227, 173, 38, 0.16);
+}
+
+
+/* SETAS PERSONALIZADAS */
+
+.setaFilmes{
+width: 5.5vw;
+height: 5.5vw;
+min-width: 5.5vw;
+padding: 0;
+border: none;
+background: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.setaFilmes img{
+width: 150%;
+height: 150%;
+max-width: none;
+object-fit: contain;
+display: block;
+filter: invert(1);
+transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.setaEsquerda img{
+transform: scaleX(-1);
+}
+
+.setaFilmes:hover img{
+transform: scale(1.15);
+filter: invert(1) drop-shadow(0 0 8px #e3ad26);
+}
+
+.setaEsquerda:hover img{
+transform: scaleX(-1) scale(1.15);
+}
+
+.setaFilmes:active{
+transform: scale(0.9);
+}
+
+.setaFilmes:focus-visible{
+outline: 2px solid #fff2c6;
+outline-offset: 4px;
+border-radius: 50%;
+}
+
+
+/* PÁGINA SOBRE NÓS / CONTATOS */
+
+.conteudoSobrenos{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+width: 100%;
+height: 85%;
+padding: 2vw 1.5vw;
+gap: 5vw;
+}
+
+.textosSobrenos{
+width: 55%;
+}
+
+.blocoSobrenos{
+margin-bottom: 2vw;
+}
+
+.blocoSobrenos h2{
+font-family: Impact, "Arial Narrow", sans-serif;
+font-size: 1.8vw;
+font-weight: normal;
+color: #fff1bf;
+margin-bottom: 0.2vw;
+}
+
+.blocoSobrenos p{
+font-size: 1.1vw;
+line-height: 1.8vw;
+color: #e0e3e9;
+max-width: 42vw;
+}
+
+.ladoDireitoSobrenos{
+width: 40%;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 0.5vw;
+}
+
+.imagemSobrenos{
+width: 25vw;
+height: 33.5vw;
+overflow: hidden;
+border-radius: 8px;
+}
+
+.imagemSobrenos img{
+width: 100%;
+height: 100%;
+object-fit: fill;
+display: block;
+border-radius: 8px;
+}
+
+.redesSociais{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 3vw;
+width: 25vw;
+margin-top: 2.5vw;
+}
+
+.redesSociais a{
+width: 3vw;
+height: 3vw;
+display: block;
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+text-decoration: none;
+transition: 0.3s ease;
+}
+
+.redesSociais a:nth-child(1){
+background-image: url("Imagem/instagram.png");
+}
+
+.redesSociais a:nth-child(2){
+background-image: url("Imagem/tik-tok.png");
+}
+
+.redesSociais a:nth-child(3){
+background-image: url("Imagem/twitter.png");
+}
+
+.redesSociais a:hover{
+color: #e3ad26;
+transform: translateY(-5px);
+}
+
+
+@media (max-width: 750px){
+
+.pagina{
+height: auto;
+min-height: 100vh;
+padding: 20px;
+padding-top: calc(20px + 74px + 1vw);
+}
+
+.cabecalho{
+flex-wrap: wrap;
+}
+
+.menu ul{
+flex-wrap: wrap;
+gap: 12px;
+}
+
+.menu a{
+font-size: 10px;
+}
+
+.conteudo{
+flex-direction: column;
+}
+
+.textoPrincipal,
+.imagens{
+width: 100%;
+}
+
+.textoPrincipal h1{
+font-size: 45px;
+}
+
+.imagemPrincipal{
+aspect-ratio: 16 / 9;
+}
+
+.imagemSecundaria{
+aspect-ratio: 3.2 / 1;
+}
+
+.conteudoNoticia{
+height: auto;
+flex-direction: column;
+align-items: flex-start;
+padding: 30px 10px;
+gap: 30px;
+}
+
+.textoNoticia{
+width: 100%;
+}
+
+.textoNoticia h1{
+font-size: 38px;
+margin-bottom: 25px;
+}
+
+.textoNoticia h2{
+font-size: 23px;
+margin-bottom: 20px;
+}
+
+.textoNoticia p{
+font-size: 14px;
+line-height: 22px;
+max-width: 100%;
+margin-bottom: 20px;
+}
+
+.imagemNoticia{
+width: 70%;
+max-height: none;
+align-self: center;
+}
+
+.botaoVerMais{
+width: 160px;
+padding: 12px 15px;
+font-size: 13px;
+}
+
+.conteudoFilmes{
+height: auto;
+min-height: 75vh;
+padding: 30px 0;
+gap: 5px;
+margin-top: 3vw;
+}
+
+.listaFilmes{
+width: 100%;
+gap: 5px;
+}
+
+.cardFilme{
+width: 28%;
+}
+
+.cardFilme img{
+height: 38vw;
+}
+
+.cardFilme h2{
+font-size: 11px;
+margin-top: 10px;
+}
+
+.filmeCentral{
+width: 28%;
+}
+
+.filmeCentral img{
+height: 44vw;
+}
+
+.setaFilmes{
+width: 35px;
+height: 35px;
+min-width: 35px;
+}
+
+.setaFilmes img{
+width: 150%;
+height: 150%;
+}
+
+/* SOBRE NÓS NO CELULAR */
+
+.conteudoSobrenos{
+height: auto;
+flex-direction: column;
+padding: 25px 5px;
+gap: 20px;
+}
+
+.textosSobrenos{
+width: 100%;
+}
+
+.blocoSobrenos{
+margin-bottom: 25px;
+padding-left: 12px;
+}
+
+.blocoSobrenos h2{
+font-size: 22px;
+margin-bottom: 5px;
+}
+
+.blocoSobrenos p{
+font-size: 14px;
+line-height: 22px;
+max-width: 100%;
+}
+
+.ladoDireitoSobrenos{
+width: 100%;
+padding-top: 0;
+}
+
+.imagemSobrenos{
+width: 70%;
+height: 70vw;
+}
+
+.redesSociais{
+width: 70%;
+gap: 35px;
+margin-top: 25px;
+}
+
+.redesSociais a{
+font-size: 28px;
+}
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+.cardFilme{
+transition: none;
+}
+
+}
+
+@media (max-width: 1583px){
+
+.pagina{
+height: auto;
+min-height: 100vh;
+padding: 24px;
+overflow: visible;
+}
+
+.cabecalho{
+position: relative;
+left: auto;
+top: auto;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 16px 24px;
+width: 100%;
+height: auto;
+margin: 0 0 28px;
+zoom: 1;
+}
+
+.logo{
+position: static;
+flex: 1 1 240px;
+}
+
+.logo h2{
+position: static;
+margin-top: 3px;
+font-size: clamp(24px, 2.5vw, 32px);
+}
+
+.menu{
+position: static;
+order: 3;
+display: flex;
+flex: 1 1 100%;
+flex-wrap: wrap;
+gap: 12px 22px;
+width: 100%;
+}
+
+.botaoConversar{
+position: static;
+flex: 0 0 208px;
+}
+
+.conteudoFilmes{
+width: 100%;
+height: auto;
+min-height: 0;
+margin: 0;
+padding: 16px 0;
+gap: 12px;
+}
+
+.listaFilmes{
+flex: 1;
+min-width: 0;
+width: auto;
+gap: clamp(8px, 2vw, 24px);
+}
+
+.cardFilme img{
+height: auto;
+object-fit: contain;
+background-color: #101d31;
+}
+
+.cardFilme h2{
+font-size: clamp(16px, 1.7vw, 22px);
+}
+
+.filmeCentral img{
+height: auto;
+}
+
+.setaFilmes{
+width: clamp(38px, 4.5vw, 54px);
+height: clamp(38px, 4.5vw, 54px);
+min-width: clamp(38px, 4.5vw, 54px);
+}
+
+.setaFilmes img{
+width: 100%;
+height: 100%;
+}
+
+.conteudoSobrenos{
+height: auto;
+padding: 12px 0;
+gap: clamp(24px, 4vw, 48px);
+}
+
+.textosSobrenos{
+width: 60%;
+}
+
+.blocoSobrenos{
+margin-bottom: 28px;
+}
+
+.blocoSobrenos h2{
+font-size: clamp(24px, 2.2vw, 32px);
+margin-bottom: 8px;
+}
+
+.blocoSobrenos p{
+max-width: none;
+font-size: clamp(16px, 1.25vw, 19px);
+line-height: 1.5;
+}
+
+.ladoDireitoSobrenos{
+width: 36%;
+flex-shrink: 0;
+padding-top: 0;
+}
+
+.imagemSobrenos{
+width: 100%;
+max-width: 360px;
+height: auto;
+aspect-ratio: 2 / 3;
+}
+
+.redesSociais{
+width: 100%;
+max-width: 360px;
+gap: 24px;
+margin-top: 20px;
+}
+
+.redesSociais a{
+width: 36px;
+height: 36px;
+}
+
+}
+
+@media (max-width: 760px){
+
+.pagina{
+padding: 16px;
+}
+
+.cabecalho{
+gap: 14px 16px;
+margin-bottom: 20px;
+}
+
+.logo{
+flex-basis: 180px;
+}
+
+.logoNome{
+font-size: 16px;
+}
+
+.logoNome img{
+width: 34px;
+height: 34px;
+}
+
+.logo h2{
+font-size: 24px;
+}
+
+.botaoConversar{
+flex-basis: 190px;
+width: 190px;
+min-width: 0;
+height: 48px;
+padding: 0 16px;
+}
+
+.menu{
+gap: 10px 14px;
+}
+
+.menu a{
+font-size: 12px;
+}
+
+.conteudoFilmes{
+gap: 4px;
+padding: 12px 0;
+}
+
+.listaFilmes{
+gap: 4px;
+}
+
+.cardFilme{
+width: 31%;
+}
+
+.cardFilme img,
+.filmeCentral img{
+height: auto;
+object-fit: contain;
+}
+
+.cardFilme h2{
+min-height: 34px;
+margin-top: 8px;
+font-size: clamp(10px, 2.8vw, 15px);
+line-height: 1.15;
+}
+
+.filmeCentral{
+width: 31%;
+}
+
+.setaFilmes{
+width: 32px;
+height: 32px;
+min-width: 32px;
+}
+
+.conteudoSobrenos{
+flex-direction: column;
+gap: 24px;
+padding: 8px 0;
+}
+
+.textosSobrenos{
+width: 100%;
+}
+
+.blocoSobrenos{
+margin-bottom: 22px;
+}
+
+.blocoSobrenos h2{
+font-size: clamp(22px, 5vw, 28px);
+margin-bottom: 6px;
+}
+
+.blocoSobrenos p{
+font-size: 16px;
+line-height: 1.55;
+}
+
+.ladoDireitoSobrenos{
+width: min(100%, 380px);
+align-self: center;
+}
+
+.imagemSobrenos{
+max-width: none;
+}
+
+.redesSociais{
+max-width: none;
+}
+
+}
+
+@media (max-width: 480px){
+
+.conteudoFilmes{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas:
+    "filmes filmes"
+    "anterior proximo";
+align-items: center;
+gap: 12px 8px;
+}
+
+.listaFilmes{
+grid-area: filmes;
+width: 100%;
+justify-content: space-between;
+gap: 8px;
+}
+
+.cardFilme,
+.filmeCentral{
+width: 30%;
+}
+
+.cardFilme h2{
+font-size: clamp(12px, 3.2vw, 16px);
+}
+
+.setaEsquerda{
+grid-area: anterior;
+justify-self: end;
+}
+
+.setaDireita{
+grid-area: proximo;
+justify-self: start;
+}
+
+.setaFilmes{
+width: 40px;
+height: 40px;
+min-width: 40px;
+border: 1px solid rgba(255, 242, 188, 0.2);
+border-radius: 50%;
+background-color: rgba(18, 31, 51, 0.8);
+}
+
+.logo{
+flex-basis: 100%;
+min-width: 0;
+}
+
+.logo h2{
+white-space: normal;
+}
+
+.botaoConversar{
+flex: 0 0 100%;
+width: 100%;
+}
+
+}
+
+
