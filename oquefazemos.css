@@ -117,6 +117,8 @@ h1 {
 }
 
 .texto {
+  align-self: start;
+  padding-top: 8px;
   color: #fff9e5;
   font-size: 22px;
   line-height: 1.7;
@@ -133,6 +135,19 @@ h1 {
   height: 265px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+.autores {
+  position: absolute;
+  left: 67px;
+  bottom: 12px;
+  padding: 14px 22px;
+  border-radius: 5px;
+  background: #d6a52d;
+  color: #101c30;
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 @media (max-width: 1583px) {
@@ -190,6 +205,12 @@ h1 {
     height: min(225px, 18vw);
     min-height: 160px;
   }
+
+  .autores {
+    position: static;
+    align-self: flex-start;
+    margin-top: 12px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -216,4 +237,3 @@ h1 {
     aspect-ratio: 16 / 9;
   }
 }
-
